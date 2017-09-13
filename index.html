@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Free xhtml template - minimalistic-design.com</title>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+<body>
+
+	<div id="page">
+
+		<div id="header">
+		<h1><a href="#">Emerge</a></h1>
+			<h2>Timed-release of Self-emerging Data</h2>
+		</div>
+
+		<div id="wrapper">
+
+			<div id="content">
+
+				<h2>Overview</h2>
+				<div id="index_image">
+					<img src="figures/index_figure_200.jpg" alt="index_image" />
+				</div>
+				<b><big>Emerge</big></b> is a self-emerging timed data release protocol for securely hiding data encryption keys of private encrypted data <br />in a large-scale Distributed Hash Table (DHT) network that makes the data available and accessible only at the defined release time. 
+				<br /><br />
+				Most timed-release solutions are centralized. As a distributed solution based on DHT, Emerge offers these main advantages:
+				<ul>
+					<li>No need to trust servise providers.</li>
+					<li>No single point of failure issue.</li>
+
+				</ul> 
+				<br /><br />
+				
+				<h2>Motivation</h2> 
+				<p>
+					<br />Flow chart for releasing data to future:
+				</p>
+				<div id="motivation">
+					<img src="figures/motivation.jpg" alt="motivation" />
+				</div>
+
+				<p>
+					Time-varying sensitivity of data:
+					<ul>
+						<li>
+							The sensitivity of data can fall suddenly at a threshold time points:
+							<ul>
+								<li>Online voting/bidding system.</li>
+								<li>Online exam system.</li>
+							</ul>
+						</li>
+						<li>
+						The sensitivity of data can also reduce gradually along the time. After a threshold sensitivity, the data becomes releasable:
+							<ul>
+								<li>Personal data of individuals (e.g., medical diagnostics information, web browsing patterns, location trajectory patterns) collected during the childhood and adult life of individuals. </li>
+							</ul>
+						</li>
+					</ul>
+				</p>
+
+				<div id="varying_sen1">
+					<img src="figures/varying_sen1.jpg" alt="varying_sen1" />
+				</div>
+				<div id="varying_sen2">
+					<img src="figures/varying_sen2.jpg" alt="varying_sen2" />
+				</div>
+				
+				<br /><br />
+				<br /><br />
+				<br /><br />
+				<br /><br />
+				<br /><br />
+				<br /><br />
+				<br /><br />
+
+				
+				<h2>Framework</h2> 
+				<p>
+					There are four major entities in the Emerge system:
+					<ul>
+						<li><b>Data sender</b>: the entity who wants to send data to the data receiver.</li>
+						<li><b>Data receiver</b>: the entity who wants to get access to the message sent by the data sender.</li>
+						<li><b>DHT network</b>: It is required to hold and hide the secret key before the release time.</li>
+						<li><b>Cloud</b>: it is required to store the encrypted data.</li>
+					</ul>
+				</p>
+				<div id="framework">
+					<img src="figures/framework.jpg" alt="framework" />
+				</div>
+
+				<h2>Challenges</h2> 
+				<p>
+					<ul>
+						<li><b>Release-ahead attack:</b> to extract encryption key from DHT network to decrypt data before release time.</li>
+						<li><b>Drop attack:</b> to prevent encryption key to be received by legitimate receivers to decrypt data in cloud at release time.</li>
+						<li><b>Churn:</b> the phenomenon that nodes frequent join and leave DHT network.</li>
+					</ul>
+				</p>
+				<br /><br />
+				
+				<h2>Emerge protocols</h2> 
+				<p>
+					<ul>
+						<li><b>One-hop scheme:</b> it applies erasure coding to split encryption key package into n fragments and send each of them through an one-hop path to receiver to allow at most n-m of fragment transmissions to be unsuccessful.</li>
+						<li><b>Adjusted one-hop scheme:</b> it estimates the number of dead holder nodes and reserve some fragments for them through adjusting m and n.</li>
+						<li><b>Multi-hop scheme:</b> it arrange multiple sets of nodes to carry the packages in relay from the sender to the receiver.</li>
+					</ul>
+				</ul>
+				</p>
+
+				<div id="algorithm">
+					<img src="figures/algorithm.jpg" alt="algorithm" />
+				</div>
+
+				<br /><br />
+				<br /><br />
+				<br /><br />
+				<br /><br />
+				<br /><br />
+				<br /><br />
+				<br /><br />
+				<br /><br />
+				<br /><br />
+
+				<h2 id="publications">Publications</h2> 
+				<ul>
+					<li>Chao Li and Balaji Palanisamy, "Timed-release of Self-emerging Data using Distributed Hash Tables", Proc. of 37th IEEE International Conference on Distributed Computing Systems (<b>ICDCS 2017</b>), Atlanta, USA. [<a href="http://www.sis.pitt.edu/bpalan/papers/SelfemergingData-ICDCS2017.pdf">PDF</a>]</li>
+					<li>Chao Li and Balaji Palanisamy, "Emerge: Self-emerging Data Release using Cloud Data Storage", Proc. of 10th IEEE International Conference on Cloud Computing (<b>Cloud 2017</b>), Honolulu, USA.[<a href="http://www.sis.pitt.edu/bpalan/papers/Emerge-cloud-2017.pdf">PDF</a>]</li>
+				</ul>
+				
+
+			</div>
+
+			<div id="sidebar"> 
+
+				<h2>Menu Navigation</h2>
+
+				<ul>
+					<li><a href="index.html">Overview</a></li> 
+					<li><a href="downloads.html">Downloads</a></li> 
+					<li><a href="people.html">People</a></li> 
+					<li><a href="index.html#publications">Publications</a></li>
+				</ul>
+
+				<h2>Useful Resources</h2>
+
+				<ul>
+					<li><a href="http://overlayweaver.sourceforge.net/">Simulation: Overlay Weaver</a></li> 
+				</ul>
+
+			</div>
+
+			<div style="clear: both;"> </div>
+
+		</div>
+
+		<div id="footer">
+			<p>
+				Design by <a href="http://www.minimalistic-design.com">Minimalistic Design</a>
+			</p>
+		</div>
+
+	</div>
+
+
+</body>
+
+</html>
+
