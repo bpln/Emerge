@@ -47,9 +47,10 @@
 							</ul>
 						</li>
 						<li>
-						The sensitivity of data can also reduce gradually along the time. After a threshold sensitivity, the data becomes releasable:
+						The sensitivity of data may also reduce gradually over time. After a threshold 
+							level of sensitivity has reached, the data may become releasable:
 							<ul>
-								<li>Personal data of individuals (e.g., medical diagnostics information, web browsing patterns, location trajectory patterns) collected during the childhood and adult life of individuals. </li>
+								<li>Personal data of individuals (e.g., web browsing patterns, location trajectory patterns, medical diagnostics information). </li>
 							</ul>
 						</li>
 					</ul>
@@ -71,36 +72,14 @@
 				<br /><br />
 
 				
-				<h2>Framework</h2> 
-				<p>
-					There are four major entities in the Emerge system:
-					<ul>
-						<li><b>Data sender</b>: the entity who wants to send data to the data receiver.</li>
-						<li><b>Data receiver</b>: the entity who wants to get access to the message sent by the data sender.</li>
-						<li><b>DHT network</b>: It is required to hold and hide the secret key before the release time.</li>
-						<li><b>Cloud</b>: it is required to store the encrypted data.</li>
-					</ul>
-				</p>
-				<div id="framework">
-					<img src="figures/framework.jpg" alt="framework" />
-				</div>
-
-				<h2>Challenges</h2> 
-				<p>
-					<ul>
-						<li><b>Release-ahead attack:</b> to extract encryption key from DHT network to decrypt data before release time.</li>
-						<li><b>Drop attack:</b> to prevent encryption key to be received by legitimate receivers to decrypt data in cloud at release time.</li>
-						<li><b>Churn:</b> the phenomenon that nodes frequent join and leave DHT network.</li>
-					</ul>
-				</p>
-				<br /><br />
 				
-				<h2>Emerge protocols</h2> 
+				
+				<h2>Preliminary Emerge protocols</h2> 
 				<p>
 					<ul>
-						<li><b>One-hop scheme:</b> it applies erasure coding to split encryption key package into n fragments and send each of them through an one-hop path to receiver to allow at most n-m of fragment transmissions to be unsuccessful.</li>
-						<li><b>Adjusted one-hop scheme:</b> it estimates the number of dead holder nodes and reserve some fragments for them through adjusting m and n.</li>
-						<li><b>Multi-hop scheme:</b> it arrange multiple sets of nodes to carry the packages in relay from the sender to the receiver.</li>
+						<li><b>One-hop Approach:</b> This scheme applies erasure coding to split the encryption key into fragments and routes them through an one-hop path to the receiver.</li>
+						<li><b>Adjusted one-hop Approach:</b> This scheme estimates the number of dead holder nodes and adjusts the key share routing to minimize the data loss.</li>
+						<li><b>Multi-hop Approach:</b> This scheme arranges multiple sets of nodes to route the key shares in relay from the sender to the receiver.</li>
 					</ul>
 				</ul>
 				</p>
