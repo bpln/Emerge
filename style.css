@@ -48,7 +48,7 @@ ul { list-style-type: none; }
 #index_image {
     float: right; 
     padding: 0 10px 10px 0;
-    height: 200px;
+    height: 183px;
     width: 200px;
 }
 
@@ -104,7 +104,7 @@ ul { list-style-type: none; }
 #algorithm {
     float: left; 
     padding: 0 10px 10px 0;
-    height: 250px;
+    height: 310px;
     width: 450px;
 }
 
